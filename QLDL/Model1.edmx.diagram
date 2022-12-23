@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="328bc413656347018596160c35ec5aa9" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDKDULICHModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tChuyenDuLich" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tDangKy" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tDiaDiemThamQuan" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tKhach" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tTuyen" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tChuyenDuLich_MaTuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tDangKy_MaChuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tDangKy_MaKhach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDKDULICHModel.tChiTietTuyenDuLich" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
