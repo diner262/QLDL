@@ -15,7 +15,7 @@ namespace QLDL
     public partial class frm_Login : DevExpress.XtraEditors.XtraForm
     {
         string username = "admin";
-        string password = "123456789";
+        string password = "123456";
 
         public frm_Login()
         {
