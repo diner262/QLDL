@@ -233,6 +233,26 @@ namespace QLDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_marina_hinic_730778 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-marina-hinic-730778", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_oleksandr_pidvalnyi {
+            get {
+                object obj = ResourceManager.GetObject("pexels-oleksandr-pidvalnyi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeTourist {
             get {
                 object obj = ResourceManager.GetObject("placeTourist", resourceCulture);

@@ -30,6 +30,7 @@ namespace QLDL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QLDL.frmSplashScreen), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
@@ -137,6 +138,7 @@ namespace QLDL
             this.barRegister = new DevExpress.XtraBars.BarButtonItem();
             this.barLogout = new DevExpress.XtraBars.BarButtonItem();
             this.barDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.barDBControl = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -148,9 +150,8 @@ namespace QLDL
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barDBControl = new DevExpress.XtraBars.BarButtonItem();
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -203,6 +204,10 @@ namespace QLDL
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 40;
             // 
             // repositoryItemColorPickEdit1
             // 
@@ -1179,6 +1184,14 @@ namespace QLDL
             this.barDashboard.Name = "barDashboard";
             this.barDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDashboard_ItemClick);
             // 
+            // barDBControl
+            // 
+            this.barDBControl.Caption = "DBControl";
+            this.barDBControl.Id = 50;
+            this.barDBControl.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barDBControl.ImageOptions.SvgImage")));
+            this.barDBControl.Name = "barDBControl";
+            this.barDBControl.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDBControl_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1266,11 +1279,6 @@ namespace QLDL
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Manage";
             // 
-            // workspaceManager1
-            // 
-            this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition1;
-            // 
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.ItemLinks.Add(this.barDashboard);
@@ -1278,13 +1286,10 @@ namespace QLDL
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Dashboard Manage";
             // 
-            // barDBControl
+            // workspaceManager1
             // 
-            this.barDBControl.Caption = "DBControl";
-            this.barDBControl.Id = 50;
-            this.barDBControl.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barDBControl.Name = "barDBControl";
-            this.barDBControl.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDBControl_ItemClick);
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition1;
             // 
             // frmMain
             // 
@@ -1302,6 +1307,7 @@ namespace QLDL
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "52000882_Trần Hoàng Quang Din && 52000895_Đoàn Phương Nam | Quản lý đăng lý du lị" +
     "ch";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();

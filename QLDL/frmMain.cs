@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace QLDL
@@ -129,6 +130,14 @@ namespace QLDL
         {
             Form frmDashboard = new frmDashboard();
             frmDashboard.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 40; i++)
+            {
+                Thread.Sleep(40);
+            }
         }
     }
 }
