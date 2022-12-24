@@ -12,13 +12,13 @@ using System.Drawing;
 
 namespace QLDL
 {
-    public partial class frm_Login : DevExpress.XtraEditors.XtraForm
+    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
-        string username = "admin";
-        string password = "123456";
+        string UserName = "admin";
+        string PassWord = "123456";
         QLDKDULICHEntities data = new QLDKDULICHEntities();
 
-        public frm_Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -71,13 +71,13 @@ namespace QLDL
 
             else if (checkAccount(txtUser.Text, txtPassword.Text))
             {
-                frm_main frmMain = new frm_main();
+                frmMain frmMain = new frmMain();
                 txtUser.Clear();
                 txtPassword.Clear();
                 frmMain.Show();
                 this.Hide();
 
-                frmMain.Logout += FrmMain_Logout;
+                frmMain.Logout += frmMain_Logout;
             }
 
             else
@@ -86,15 +86,15 @@ namespace QLDL
             }
         }
 
-        private void FrmMain_Logout(object sender, EventArgs e)
+        private void frmMain_Logout(object sender, EventArgs e)
         {
-            (sender as frm_main).Close();
+            (sender as frmMain).Close();
             this.Show();
         }
 
         bool checkAccount(String username, String password)
         {
-            if (username == this.username && password == this.password)
+            if (username == this.UserName && password == this.PassWord)
             {
                 return true;
             }

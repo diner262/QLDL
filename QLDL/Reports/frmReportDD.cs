@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLDL.Reports
 {
-    public partial class frm_ReportKH : DevExpress.XtraEditors.XtraForm
+    public partial class frmReportDD : DevExpress.XtraEditors.XtraForm
     {
-        public frm_ReportKH()
+        public frmReportDD()
         {
             InitializeComponent();
         }

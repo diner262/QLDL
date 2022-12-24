@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_main : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         QLDKDULICHEntities data = new QLDKDULICHEntities();
-        public frm_main()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -68,37 +68,37 @@ namespace QLDL
 
         private void barRoute_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmTuyen = new frm_Tuyen();
+            Form frmTuyen = new frmTuyen();
             frmTuyen.Show();
         }
 
         private void barTourist_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmChuyen = new frm_ChuyenDuLich();
+            Form frmChuyen = new frmChuyenDuLich();
             frmChuyen.Show();
         }
 
         private void barPlace_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmDD = new frm_DiaDiemThamQuan();
+            Form frmDD = new frmDiaDiemThamQuan();
             frmDD.Show();
         }
 
         private void barCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmKH = new frm_KhachHang();
+            Form frmKH = new frmKhachHang();
             frmKH.Show();
         }
 
         private void barRegister_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmDangKy = new frm_DangKy();
+            Form frmDangKy = new frmDangKy();
             frmDangKy.Show();
         }
 
         private void barAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmAbout = new frm_About();
+            Form frmAbout = new frmAbout();
             frmAbout.Show();
         }
 
@@ -115,7 +115,7 @@ namespace QLDL
 
         private void barReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frmRP = new frm_Report();
+            Form frmRP = new frmReport();
             frmRP.Show();
         }
     }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_Report : XtraForm
+    public partial class frmReport : XtraForm
     {
-        public frm_Report()
+        public frmReport()
         {
             InitializeComponent();
         }

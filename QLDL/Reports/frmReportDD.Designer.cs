@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL.Reports
 {
-    partial class frm_ReportKH
+    partial class frmReportDD
     {
         /// <summary>
         /// Required designer variable.
@@ -266,11 +266,11 @@ namespace QLDL.Reports
             // documentViewer1
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.DocumentSource = typeof(QLDL.Reports.XtraReportKH);
+            this.documentViewer1.DocumentSource = typeof(QLDL.Reports.XtraReportDD);
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(0, 146);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(861, 238);
+            this.documentViewer1.Size = new System.Drawing.Size(849, 393);
             this.documentViewer1.TabIndex = 0;
             // 
             // documentViewerRibbonController1
@@ -351,7 +351,7 @@ namespace QLDL.Reports
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
-            this.ribbonControl1.Size = new System.Drawing.Size(861, 146);
+            this.ribbonControl1.Size = new System.Drawing.Size(849, 146);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -1453,24 +1453,23 @@ namespace QLDL.Reports
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem52);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 384);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 539);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(861, 22);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(849, 22);
             // 
-            // frm_ReportKH
+            // frm_ReportDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 406);
+            this.ClientSize = new System.Drawing.Size(849, 561);
             this.ControlBox = false;
             this.Controls.Add(this.documentViewer1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_ReportKH";
-            this.ShowInTaskbar = false;
-            this.Text = "Báo cáo khách hàng";
+            this.Name = "frm_ReportDD";
+            this.Text = "frm_ReportDD";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerRibbonController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

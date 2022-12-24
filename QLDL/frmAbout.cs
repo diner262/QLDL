@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLDL.Reports
+namespace QLDL
 {
-    public partial class frm_ReportDD : DevExpress.XtraEditors.XtraForm
+    public partial class frmAbout : DevExpress.XtraEditors.XtraForm
     {
-        public frm_ReportDD()
+        public frmAbout()
         {
             InitializeComponent();
         }

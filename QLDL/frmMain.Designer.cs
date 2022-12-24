@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL
 {
-    partial class frm_main
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace QLDL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
             this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);

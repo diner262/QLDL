@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL
 {
-    partial class frm_Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.

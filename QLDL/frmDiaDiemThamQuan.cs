@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_DiaDiemThamQuan : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmDiaDiemThamQuan : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         QLDKDULICHEntities data = new QLDKDULICHEntities();
-        public frm_DiaDiemThamQuan()
+        public frmDiaDiemThamQuan()
         {
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace QLDL
 
         private void btnReport_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frmRP = new Reports.frm_ReportDD();
+            Form frmRP = new Reports.frmReportDD();
             frmRP.Show();
         }
     }

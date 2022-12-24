@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_ChuyenDuLich : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmChuyenDuLich : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         QLDKDULICHEntities data = new QLDKDULICHEntities();
-        public frm_ChuyenDuLich()
+        public frmChuyenDuLich()
         {
             InitializeComponent();
         }

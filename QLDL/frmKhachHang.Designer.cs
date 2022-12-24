@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL
 {
-    partial class frm_KhachHang
+    partial class frmKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace QLDL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KhachHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();

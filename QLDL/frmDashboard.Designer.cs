@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL
 {
-    partial class frm_About
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,9 @@ namespace QLDL
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frm_About
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
-            this.BackgroundImageStore = global::QLDL.Properties.Resources.vietnam_tourist;
-            this.ClientSize = new System.Drawing.Size(1039, 570);
-            this.Name = "frm_About";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông tin phần mềm";
-            this.ResumeLayout(false);
-
+            this.Text = "frm_Dashboard";
         }
 
         #endregion

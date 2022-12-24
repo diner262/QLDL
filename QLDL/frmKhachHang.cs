@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_KhachHang : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmKhachHang : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         QLDKDULICHEntities data = new QLDKDULICHEntities();
-        public frm_KhachHang()
+        public frmKhachHang()
         {
             InitializeComponent();
         }
@@ -109,7 +109,7 @@ namespace QLDL
             //Reports.XtraReportKH report = new Reports.XtraReportKH();
             //ReportDesignTool designTool = new ReportDesignTool(report);
             //designTool.ShowDesignerDialog();
-            Form frmRP = new Reports.frm_ReportKH();
+            Form frmRP = new Reports.frmReportKH();
             frmRP.Show();
         }
     }

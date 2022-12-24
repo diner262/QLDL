@@ -1,7 +1,7 @@
 ﻿
 namespace QLDL
 {
-    partial class frm_Tuyen
+    partial class frmDangKy
     {
         /// <summary>
         /// Required designer variable.
@@ -30,55 +30,55 @@ namespace QLDL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Tuyen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangKy));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
-            this.ribbon1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cobbSoNgay = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.tTuyenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimeDangKy = new System.Windows.Forms.DateTimePicker();
+            this.tDangKyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMaTuyen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTenTuyen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSoNgay = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
-            this.txtTenTuyen = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaTuyen = new DevExpress.XtraEditors.TextEdit();
+            this.colMaKhach = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgayDKy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaChuyen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSTDTra1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cobbMaChuyen = new System.Windows.Forms.ComboBox();
+            this.cobbMaKH = new System.Windows.Forms.ComboBox();
+            this.txtSTDTra = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colSTDTra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltChuyenDuLich = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltKhach = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cobbSoNgay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tTuyenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tDangKyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTuyen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTuyen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSTDTra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -96,8 +96,8 @@ namespace QLDL
             this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbon1});
-            this.ribbon.Size = new System.Drawing.Size(933, 157);
+            this.ribbonPage1});
+            this.ribbon.Size = new System.Drawing.Size(1022, 157);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnAdd
@@ -145,12 +145,12 @@ namespace QLDL
             this.imageCollection1.Images.SetKeyName(2, "file-edit.png");
             this.imageCollection1.Images.SetKeyName(3, "Save_icon.png");
             // 
-            // ribbon1
+            // ribbonPage1
             // 
-            this.ribbon1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
-            this.ribbon1.Name = "ribbon1";
-            this.ribbon1.Text = "HOME";
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "HOME";
             // 
             // ribbonPageGroup1
             // 
@@ -163,64 +163,47 @@ namespace QLDL
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 491);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 525);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(933, 22);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 22);
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.cobbSoNgay);
+            this.layoutControl1.Controls.Add(this.dateTimeDangKy);
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.txtGhiChu);
-            this.layoutControl1.Controls.Add(this.txtTenTuyen);
-            this.layoutControl1.Controls.Add(this.txtMaTuyen);
+            this.layoutControl1.Controls.Add(this.cobbMaChuyen);
+            this.layoutControl1.Controls.Add(this.cobbMaKH);
+            this.layoutControl1.Controls.Add(this.txtSTDTra);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 157);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(933, 334);
+            this.layoutControl1.Size = new System.Drawing.Size(1022, 368);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // cobbSoNgay
+            // dateTimeDangKy
             // 
-            this.cobbSoNgay.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tTuyenBindingSource, "SoNgay", true));
-            this.cobbSoNgay.Location = new System.Drawing.Point(181, 93);
-            this.cobbSoNgay.MenuManager = this.ribbon;
-            this.cobbSoNgay.Name = "cobbSoNgay";
-            this.cobbSoNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cobbSoNgay.Properties.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cobbSoNgay.Size = new System.Drawing.Size(212, 20);
-            this.cobbSoNgay.StyleController = this.layoutControl1;
-            this.cobbSoNgay.TabIndex = 8;
+            this.dateTimeDangKy.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tDangKyBindingSource, "NgayDKy", true));
+            this.dateTimeDangKy.Location = new System.Drawing.Point(118, 95);
+            this.dateTimeDangKy.Name = "dateTimeDangKy";
+            this.dateTimeDangKy.Size = new System.Drawing.Size(148, 21);
+            this.dateTimeDangKy.TabIndex = 9;
             // 
-            // tTuyenBindingSource
+            // tDangKyBindingSource
             // 
-            this.tTuyenBindingSource.DataSource = typeof(QLDL.tTuyen);
+            this.tDangKyBindingSource.DataSource = typeof(QLDL.tDangKy);
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.tTuyenBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(409, 28);
+            this.gridControl1.DataSource = this.tDangKyBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(459, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbon;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(512, 294);
-            this.gridControl1.TabIndex = 7;
+            this.gridControl1.Size = new System.Drawing.Size(551, 328);
+            this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.Load += new System.EventHandler(this.gridControl1_Load);
@@ -228,74 +211,68 @@ namespace QLDL
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMaTuyen,
-            this.colTenTuyen,
-            this.colSoNgay,
-            this.colGhiChu});
+            this.colMaKhach,
+            this.colNgayDKy,
+            this.colMaChuyen,
+            this.colSTDTra1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colMaTuyen
+            // colMaKhach
             // 
-            this.colMaTuyen.FieldName = "MaTuyen";
-            this.colMaTuyen.Name = "colMaTuyen";
-            this.colMaTuyen.Visible = true;
-            this.colMaTuyen.VisibleIndex = 0;
-            this.colMaTuyen.Width = 96;
+            this.colMaKhach.FieldName = "MaKhach";
+            this.colMaKhach.Name = "colMaKhach";
+            this.colMaKhach.Visible = true;
+            this.colMaKhach.VisibleIndex = 1;
             // 
-            // colTenTuyen
+            // colNgayDKy
             // 
-            this.colTenTuyen.FieldName = "TenTuyen";
-            this.colTenTuyen.Name = "colTenTuyen";
-            this.colTenTuyen.Visible = true;
-            this.colTenTuyen.VisibleIndex = 1;
-            this.colTenTuyen.Width = 186;
+            this.colNgayDKy.FieldName = "NgayDKy";
+            this.colNgayDKy.Name = "colNgayDKy";
+            this.colNgayDKy.Visible = true;
+            this.colNgayDKy.VisibleIndex = 2;
             // 
-            // colSoNgay
+            // colMaChuyen
             // 
-            this.colSoNgay.FieldName = "SoNgay";
-            this.colSoNgay.Name = "colSoNgay";
-            this.colSoNgay.Visible = true;
-            this.colSoNgay.VisibleIndex = 2;
-            this.colSoNgay.Width = 69;
+            this.colMaChuyen.FieldName = "MaChuyen";
+            this.colMaChuyen.Name = "colMaChuyen";
+            this.colMaChuyen.Visible = true;
+            this.colMaChuyen.VisibleIndex = 0;
             // 
-            // colGhiChu
+            // colSTDTra1
             // 
-            this.colGhiChu.FieldName = "GhiChu";
-            this.colGhiChu.Name = "colGhiChu";
-            this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 3;
-            this.colGhiChu.Width = 136;
+            this.colSTDTra1.FieldName = "STDTra";
+            this.colSTDTra1.Name = "colSTDTra1";
+            this.colSTDTra1.Visible = true;
+            this.colSTDTra1.VisibleIndex = 3;
             // 
-            // txtGhiChu
+            // cobbMaChuyen
             // 
-            this.txtGhiChu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tTuyenBindingSource, "GhiChu", true));
-            this.txtGhiChu.Location = new System.Drawing.Point(181, 117);
-            this.txtGhiChu.MenuManager = this.ribbon;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(212, 20);
-            this.txtGhiChu.StyleController = this.layoutControl1;
-            this.txtGhiChu.TabIndex = 6;
+            this.cobbMaChuyen.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tDangKyBindingSource, "MaChuyen", true));
+            this.cobbMaChuyen.FormattingEnabled = true;
+            this.cobbMaChuyen.Location = new System.Drawing.Point(118, 45);
+            this.cobbMaChuyen.Name = "cobbMaChuyen";
+            this.cobbMaChuyen.Size = new System.Drawing.Size(325, 21);
+            this.cobbMaChuyen.TabIndex = 7;
             // 
-            // txtTenTuyen
+            // cobbMaKH
             // 
-            this.txtTenTuyen.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tTuyenBindingSource, "TenTuyen", true));
-            this.txtTenTuyen.Location = new System.Drawing.Point(181, 69);
-            this.txtTenTuyen.MenuManager = this.ribbon;
-            this.txtTenTuyen.Name = "txtTenTuyen";
-            this.txtTenTuyen.Size = new System.Drawing.Size(212, 20);
-            this.txtTenTuyen.StyleController = this.layoutControl1;
-            this.txtTenTuyen.TabIndex = 5;
+            this.cobbMaKH.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tDangKyBindingSource, "MaKhach", true));
+            this.cobbMaKH.FormattingEnabled = true;
+            this.cobbMaKH.Location = new System.Drawing.Point(118, 70);
+            this.cobbMaKH.Name = "cobbMaKH";
+            this.cobbMaKH.Size = new System.Drawing.Size(325, 21);
+            this.cobbMaKH.TabIndex = 5;
             // 
-            // txtMaTuyen
+            // txtSTDTra
             // 
-            this.txtMaTuyen.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tTuyenBindingSource, "MaTuyen", true));
-            this.txtMaTuyen.Location = new System.Drawing.Point(181, 45);
-            this.txtMaTuyen.MenuManager = this.ribbon;
-            this.txtMaTuyen.Name = "txtMaTuyen";
-            this.txtMaTuyen.Size = new System.Drawing.Size(212, 20);
-            this.txtMaTuyen.StyleController = this.layoutControl1;
-            this.txtMaTuyen.TabIndex = 4;
+            this.txtSTDTra.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tDangKyBindingSource, "STDTra", true));
+            this.txtSTDTra.Location = new System.Drawing.Point(364, 95);
+            this.txtSTDTra.MenuManager = this.ribbon;
+            this.txtSTDTra.Name = "txtSTDTra";
+            this.txtSTDTra.Size = new System.Drawing.Size(79, 20);
+            this.txtSTDTra.StyleController = this.layoutControl1;
+            this.txtSTDTra.TabIndex = 4;
             // 
             // Root
             // 
@@ -303,110 +280,122 @@ namespace QLDL
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem1,
-            this.layoutControlItem4,
-            this.layoutControlGroup1});
+            this.layoutControlGroup1,
+            this.layoutControlItem5});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(933, 334);
+            this.Root.Size = new System.Drawing.Size(1022, 368);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 141);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 119);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(397, 173);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(447, 229);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.gridControl1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(397, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(516, 314);
-            this.layoutControlItem4.Text = "Danh sách các Tuyến hoạt động";
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(154, 13);
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem5,
-            this.layoutControlItem3});
+            this.layoutControlItem4,
+            this.layoutControlItem3,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(397, 141);
-            this.layoutControlGroup1.Text = "Thêm thông tin tuyến hoạt động";
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.txtMaTuyen;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem1.Text = "Mã Tuyến";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(154, 13);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(447, 119);
+            this.layoutControlGroup1.Text = "Thêm thông tin đăng ký";
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.txtTenTuyen;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem2.Control = this.cobbMaKH;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem2.Text = "Tên Tuyến";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(154, 13);
+            this.layoutControlItem2.Size = new System.Drawing.Size(423, 25);
+            this.layoutControlItem2.Text = "Mã Khách Hàng";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(91, 13);
             // 
-            // layoutControlItem5
+            // layoutControlItem4
             // 
-            this.layoutControlItem5.Control = this.cobbSoNgay;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem5.Text = "Số ngày";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(154, 13);
+            this.layoutControlItem4.Control = this.cobbMaChuyen;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(423, 25);
+            this.layoutControlItem4.Text = "Mã Chuyến";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(91, 13);
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.txtGhiChu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem3.Control = this.dateTimeDangKy;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(373, 24);
-            this.layoutControlItem3.Text = "Ghi chú";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(154, 13);
+            this.layoutControlItem3.Size = new System.Drawing.Size(246, 24);
+            this.layoutControlItem3.Text = "Ngày Đăng Ký";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(91, 13);
             // 
-            // frm_Tuyen
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txtSTDTra;
+            this.layoutControlItem1.Location = new System.Drawing.Point(246, 50);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(177, 24);
+            this.layoutControlItem1.Text = "Số Tiền Đã Trả";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(91, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.gridControl1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(447, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(555, 348);
+            this.layoutControlItem5.Text = "Danh sách đăng ký";
+            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(91, 13);
+            // 
+            // colSTDTra
+            // 
+            this.colSTDTra.FieldName = "STDTra";
+            this.colSTDTra.Name = "colSTDTra";
+            // 
+            // coltChuyenDuLich
+            // 
+            this.coltChuyenDuLich.FieldName = "tChuyenDuLich";
+            this.coltChuyenDuLich.Name = "coltChuyenDuLich";
+            // 
+            // coltKhach
+            // 
+            this.coltKhach.FieldName = "tKhach";
+            this.coltKhach.Name = "coltKhach";
+            // 
+            // frm_DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 513);
+            this.ClientSize = new System.Drawing.Size(1022, 547);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Name = "frm_Tuyen";
+            this.Name = "frm_DangKy";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Quản lý Tuyến hoạt động";
+            this.Text = "Quản lý thông tin Đăng ký";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cobbSoNgay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tTuyenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tDangKyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenTuyen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTuyen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSTDTra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +404,7 @@ namespace QLDL
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbon1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.Utils.ImageCollection imageCollection1;
@@ -425,23 +414,26 @@ namespace QLDL
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private System.Windows.Forms.ComboBox cobbMaChuyen;
+        private System.Windows.Forms.ComboBox cobbMaKH;
+        private DevExpress.XtraEditors.TextEdit txtSTDTra;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.TextEdit txtGhiChu;
-        private DevExpress.XtraEditors.TextEdit txtTenTuyen;
-        private DevExpress.XtraEditors.TextEdit txtMaTuyen;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.ComboBoxEdit cobbSoNgay;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private System.Windows.Forms.BindingSource tTuyenBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaTuyen;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenTuyen;
-        private DevExpress.XtraGrid.Columns.GridColumn colSoNgay;
-        private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
+        private System.Windows.Forms.DateTimePicker dateTimeDangKy;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private System.Windows.Forms.BindingSource tDangKyBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaKhach;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayDKy;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaChuyen;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTDTra1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTDTra;
+        private DevExpress.XtraGrid.Columns.GridColumn coltChuyenDuLich;
+        private DevExpress.XtraGrid.Columns.GridColumn coltKhach;
     }
 }

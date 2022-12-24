@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLDL
 {
-    public partial class frm_About : DevExpress.XtraEditors.XtraForm
+    public partial class frmDashboard : DevExpress.XtraEditors.XtraForm
     {
-        public frm_About()
+        public frmDashboard()
         {
             InitializeComponent();
         }
