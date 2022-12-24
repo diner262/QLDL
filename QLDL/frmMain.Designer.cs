@@ -148,6 +148,7 @@ namespace QLDL
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
+            this.barDashboard = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -910,10 +911,11 @@ namespace QLDL
             this.barPlace,
             this.barCustomer,
             this.barRegister,
-            this.barLogout});
+            this.barLogout,
+            this.barDashboard});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 49;
+            this.ribbonControl1.MaxItemId = 50;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -1249,6 +1251,7 @@ namespace QLDL
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barManage);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barDashboard);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Manage";
             // 
@@ -1257,7 +1260,15 @@ namespace QLDL
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
             // 
-            // frm_main
+            // barDashboard
+            // 
+            this.barDashboard.Caption = "Dashboard";
+            this.barDashboard.Id = 49;
+            this.barDashboard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barDashboard.Name = "barDashboard";
+            this.barDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDashboard_ItemClick);
+            // 
+            // frmMain
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1268,7 +1279,7 @@ namespace QLDL
             this.Controls.Add(this.ribbonControl1);
             this.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "frm_main";
+            this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "52000882_Trần Hoàng Quang Din && 52000895_Đoàn Phương Nam | Quản lý đăng lý du lị" +
@@ -1446,6 +1457,7 @@ namespace QLDL
         private DevExpress.XtraBars.BarButtonItem barRegister;
         private DevExpress.XtraBars.BarButtonItem barLogout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem barDashboard;
     }
 }
 

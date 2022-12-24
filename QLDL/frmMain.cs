@@ -118,5 +118,11 @@ namespace QLDL
             Form frmRP = new frmReport();
             frmRP.Show();
         }
+
+        private void barDashboard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frmDashboard = new frmDashboard();
+            frmDashboard.Show();
+        }
     }
 }
