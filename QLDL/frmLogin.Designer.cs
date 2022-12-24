@@ -83,7 +83,7 @@ namespace QLDL
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(68, 464);
+            this.labelControl6.Location = new System.Drawing.Point(69, 464);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(233, 21);
             this.labelControl6.TabIndex = 7;
@@ -107,7 +107,7 @@ namespace QLDL
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(223, 437);
+            this.labelControl4.Location = new System.Drawing.Point(227, 437);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(75, 21);
             this.labelControl4.TabIndex = 5;

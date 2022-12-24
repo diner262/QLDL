@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 using System.Threading;
 
 namespace QLDL
@@ -93,7 +92,7 @@ namespace QLDL
             this.Show();
         }
 
-        bool checkAccount(String username, String password)
+        public bool checkAccount(String username, String password)
         {
             if (username == this.UserName && password == this.PassWord)
             {
@@ -101,7 +100,7 @@ namespace QLDL
             }
 
             var u = data.tUser
-                    .Where(x => x.TenDangNhap == txtUser.Text & x.MatKhau == txtPassword.Text)
+                    .Where(x => x.TenDangNhap == username & x.MatKhau == password)
                     .FirstOrDefault();
             if (u != null)
             {

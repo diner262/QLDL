@@ -47,6 +47,7 @@ namespace QLDL
             this.progressBarControl.EditValue = 0;
             this.progressBarControl.Location = new System.Drawing.Point(23, 242);
             this.progressBarControl.Name = "progressBarControl";
+            this.progressBarControl.Properties.MarqueeAnimationSpeed = 50;
             this.progressBarControl.Size = new System.Drawing.Size(498, 18);
             this.progressBarControl.TabIndex = 5;
             // 
@@ -56,9 +57,9 @@ namespace QLDL
             this.labelCopyright.LineVisible = true;
             this.labelCopyright.Location = new System.Drawing.Point(23, 286);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(110, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(44, 13);
             this.labelCopyright.TabIndex = 6;
-            this.labelCopyright.Text = "Copyright © 2022-2023";
+            this.labelCopyright.Text = "Copyright";
             // 
             // labelStatus
             // 
@@ -79,13 +80,13 @@ namespace QLDL
             this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.peImage.Properties.ShowMenu = false;
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peImage.Size = new System.Drawing.Size(523, 224);
+            this.peImage.Size = new System.Drawing.Size(523, 237);
             this.peImage.TabIndex = 9;
             // 
             // peLogo
             // 
             this.peLogo.EditValue = global::QLDL.Properties.Resources.TDTU_logo;
-            this.peLogo.Location = new System.Drawing.Point(396, 266);
+            this.peLogo.Location = new System.Drawing.Point(435, 266);
             this.peLogo.Name = "peLogo";
             this.peLogo.Properties.AllowFocused = false;
             this.peLogo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -93,7 +94,7 @@ namespace QLDL
             this.peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.peLogo.Properties.ShowMenu = false;
             this.peLogo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peLogo.Size = new System.Drawing.Size(125, 58);
+            this.peLogo.Size = new System.Drawing.Size(86, 58);
             this.peLogo.TabIndex = 8;
             // 
             // frmSplashScreen
