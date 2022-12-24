@@ -29,6 +29,7 @@ namespace QLDL
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QLDL.frmSplashScreen), true, true);
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -320,7 +321,11 @@ namespace QLDL
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frm_Login
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 50;
+            // 
+            // frmLogin
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -331,9 +336,10 @@ namespace QLDL
             this.Controls.Add(this.sidePanel2);
             this.Controls.Add(this.sidePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_Login";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.sidePanel1.ResumeLayout(false);
             this.sidePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

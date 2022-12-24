@@ -30,7 +30,6 @@ namespace QLDL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QLDL.frmSplashScreen), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
@@ -204,10 +203,6 @@ namespace QLDL
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 40;
             // 
             // repositoryItemColorPickEdit1
             // 
@@ -1307,7 +1302,6 @@ namespace QLDL
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "52000882_Trần Hoàng Quang Din && 52000895_Đoàn Phương Nam | Quản lý đăng lý du lị" +
     "ch";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();

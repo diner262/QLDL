@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading;
 
 namespace QLDL
 {
@@ -108,6 +109,14 @@ namespace QLDL
             }
 
             return false;
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Thread.Sleep(50);
+            }
         }
     }
 }
