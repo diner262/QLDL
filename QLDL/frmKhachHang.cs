@@ -106,9 +106,6 @@ namespace QLDL
 
         private void btnReport_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //Reports.XtraReportKH report = new Reports.XtraReportKH();
-            //ReportDesignTool designTool = new ReportDesignTool(report);
-            //designTool.ShowDesignerDialog();
             Form frmRP = new Reports.frmReportKH();
             frmRP.Show();
         }

@@ -121,6 +121,12 @@ namespace QLDL
 
         private void barDashboard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Form frmDashboardview = new frmDashboardview();
+            frmDashboardview.Show();
+        }
+
+        private void barDBControl_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
             Form frmDashboard = new frmDashboard();
             frmDashboard.Show();
         }

@@ -136,6 +136,7 @@ namespace QLDL
             this.barCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.barRegister = new DevExpress.XtraBars.BarButtonItem();
             this.barLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.barDashboard = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -148,7 +149,8 @@ namespace QLDL
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
-            this.barDashboard = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barDBControl = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -912,10 +914,11 @@ namespace QLDL
             this.barCustomer,
             this.barRegister,
             this.barLogout,
-            this.barDashboard});
+            this.barDashboard,
+            this.barDBControl});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 50;
+            this.ribbonControl1.MaxItemId = 51;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -1168,6 +1171,14 @@ namespace QLDL
             this.barLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLogout_ItemClick);
             // 
+            // barDashboard
+            // 
+            this.barDashboard.Caption = "Dashboard";
+            this.barDashboard.Id = 49;
+            this.barDashboard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barDashboard.ImageOptions.SvgImage")));
+            this.barDashboard.Name = "barDashboard";
+            this.barDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDashboard_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1244,14 +1255,14 @@ namespace QLDL
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup11});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "VIEW";
             // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barManage);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barDashboard);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Manage";
             // 
@@ -1260,13 +1271,20 @@ namespace QLDL
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
             // 
-            // barDashboard
+            // ribbonPageGroup11
             // 
-            this.barDashboard.Caption = "Dashboard";
-            this.barDashboard.Id = 49;
-            this.barDashboard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barDashboard.Name = "barDashboard";
-            this.barDashboard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDashboard_ItemClick);
+            this.ribbonPageGroup11.ItemLinks.Add(this.barDashboard);
+            this.ribbonPageGroup11.ItemLinks.Add(this.barDBControl);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.ribbonPageGroup11.Text = "Dashboard Manage";
+            // 
+            // barDBControl
+            // 
+            this.barDBControl.Caption = "DBControl";
+            this.barDBControl.Id = 50;
+            this.barDBControl.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barDBControl.Name = "barDBControl";
+            this.barDBControl.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDBControl_ItemClick);
             // 
             // frmMain
             // 
@@ -1458,6 +1476,8 @@ namespace QLDL
         private DevExpress.XtraBars.BarButtonItem barLogout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem barDashboard;
+        private DevExpress.XtraBars.BarButtonItem barDBControl;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
     }
 }
 

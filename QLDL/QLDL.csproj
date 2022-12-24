@@ -101,6 +101,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard\Dashboard1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard1.Designer.cs">
+      <DependentUpon>Dashboard1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     </Compile>
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboardview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboardview.Designer.cs">
+      <DependentUpon>frmDashboardview.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -235,17 +247,23 @@
     <Compile Include="tVeDuLich.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ucDashboard.cs">
+    <Compile Include="Dashboard\ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDashboard.Designer.cs">
+    <Compile Include="Dashboard\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dashboard\Dashboard1.resx">
+      <DependentUpon>Dashboard1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboardview.resx">
+      <DependentUpon>frmDashboardview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -294,7 +312,7 @@
     <EmbeddedResource Include="Reports\XtraReportKH.resx">
       <DependentUpon>XtraReportKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucDashboard.resx">
+    <EmbeddedResource Include="Dashboard\ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
