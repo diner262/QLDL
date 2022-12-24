@@ -67,5 +67,23 @@ namespace UnitTestLogin
             actual = f.checkAccount("admin", "123456");
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void TestLoginAccount7()
+        {
+            bool expected, actual;
+            expected = true;
+            actual = f.checkAccount("tranhongngoc", "39393912");
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestLoginAccount8()
+        {
+            bool expected, actual;
+            expected = true;
+            actual = f.checkAccount("nguyenvanhau", "qwer1234");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
