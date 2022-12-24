@@ -31,5 +31,10 @@ namespace QLDL
         public virtual DbSet<tDiaDiemThamQuan> tDiaDiemThamQuan { get; set; }
         public virtual DbSet<tKhach> tKhach { get; set; }
         public virtual DbSet<tTuyen> tTuyen { get; set; }
+        public virtual DbSet<tAdmin> tAdmin { get; set; }
+        public virtual DbSet<tNhanVien> tNhanVien { get; set; }
+        public virtual DbSet<tPhieuDky> tPhieuDky { get; set; }
+        public virtual DbSet<tUser> tUser { get; set; }
+        public virtual DbSet<tVeDuLich> tVeDuLich { get; set; }
     }
 }

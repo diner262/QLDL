@@ -15,6 +15,16 @@
         <AssociationConnector Association="QLDKDULICHModel.FK_tDangKy_MaChuyen" ManuallyRouted="false" />
         <AssociationConnector Association="QLDKDULICHModel.FK_tDangKy_MaKhach" ManuallyRouted="false" />
         <AssociationConnector Association="QLDKDULICHModel.tChiTietTuyenDuLich" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tAdmin" Width="1.5" PointX="0.75" PointY="11.875" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tNhanVien" Width="1.5" PointX="3" PointY="11.5" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tPhieuDky" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tUser" Width="1.5" PointX="0.75" PointY="7.125" />
+        <EntityTypeShape EntityType="QLDKDULICHModel.tVeDuLich" Width="1.5" PointX="5.25" PointY="8.5" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tNhanVien_TenDNAdmin" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tKhach_TenDangNhap" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tVeDuLich_MaKhach" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tNhanVien_TenDangNhap" />
+        <AssociationConnector Association="QLDKDULICHModel.FK_tPhieuDky_NguoiLapPhieu" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

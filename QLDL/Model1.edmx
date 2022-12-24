@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLDKDULICHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLDKDULICHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -14,6 +14,13 @@
           <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tAdmin">
+          <Key>
+            <PropertyRef Name="TenDNAdmin" />
+          </Key>
+          <Property Name="TenDNAdmin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="tChiTietTuyenDuLich">
           <Key>
@@ -56,18 +63,61 @@
             <PropertyRef Name="MaKhach" />
           </Key>
           <Property Name="MaKhach" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenKhach" Type="nvarchar" MaxLength="50" />
-          <Property Name="DienThoai" Type="varchar" MaxLength="10" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="TenKhach" Type="nvarchar" MaxLength="100" />
+          <Property Name="DienThoai" Type="varchar" MaxLength="15" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="150" />
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tNhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenNV" Type="nvarchar" MaxLength="100" />
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenDNAdmin" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPhieuDky">
+          <Key>
+            <PropertyRef Name="SoPhieu" />
+          </Key>
+          <Property Name="SoPhieu" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenKhach" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenChuyen" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NguoiLapPhieu" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="tTuyen">
           <Key>
             <PropertyRef Name="MaTuyen" />
           </Key>
           <Property Name="MaTuyen" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenTuyen" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenTuyen" Type="nvarchar" MaxLength="100" />
           <Property Name="SoNgay" Type="int" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="TenDangNhap" />
+          </Key>
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PhanQuyen" Type="int" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="SDT" Type="varchar" MaxLength="15" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tVeDuLich">
+          <Key>
+            <PropertyRef Name="MaVe" />
+          </Key>
+          <Property Name="MaVe" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenTour" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NgayKHanh" Type="datetime" />
+          <Property Name="PhuongTien" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="GiaVe" Type="float" />
+          <Property Name="MaKhach" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <Association Name="FK_tChiTietTuyenDuLich_MaChuyen">
           <End Role="tChuyenDuLich" Type="Self.tChuyenDuLich" Multiplicity="1" />
@@ -129,14 +179,79 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tKhach_TenDangNhap">
+          <End Role="tUser" Type="Self.tUser" Multiplicity="0..1" />
+          <End Role="tKhach" Type="Self.tKhach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="tKhach">
+              <PropertyRef Name="TenDangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhanVien_TenDangNhap">
+          <End Role="tUser" Type="Self.tUser" Multiplicity="1" />
+          <End Role="tNhanVien" Type="Self.tNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="tNhanVien">
+              <PropertyRef Name="TenDangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhanVien_TenDNAdmin">
+          <End Role="tAdmin" Type="Self.tAdmin" Multiplicity="1" />
+          <End Role="tNhanVien" Type="Self.tNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tAdmin">
+              <PropertyRef Name="TenDNAdmin" />
+            </Principal>
+            <Dependent Role="tNhanVien">
+              <PropertyRef Name="TenDNAdmin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPhieuDky_NguoiLapPhieu">
+          <End Role="tNhanVien" Type="Self.tNhanVien" Multiplicity="1" />
+          <End Role="tPhieuDky" Type="Self.tPhieuDky" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tPhieuDky">
+              <PropertyRef Name="NguoiLapPhieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tVeDuLich_MaKhach">
+          <End Role="tKhach" Type="Self.tKhach" Multiplicity="1" />
+          <End Role="tVeDuLich" Type="Self.tVeDuLich" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tKhach">
+              <PropertyRef Name="MaKhach" />
+            </Principal>
+            <Dependent Role="tVeDuLich">
+              <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="QLDKDULICHModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tAdmin" EntityType="Self.tAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tChiTietTuyenDuLich" EntityType="Self.tChiTietTuyenDuLich" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tChuyenDuLich" EntityType="Self.tChuyenDuLich" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tDangKy" EntityType="Self.tDangKy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tDiaDiemThamQuan" EntityType="Self.tDiaDiemThamQuan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tKhach" EntityType="Self.tKhach" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tNhanVien" EntityType="Self.tNhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPhieuDky" EntityType="Self.tPhieuDky" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tTuyen" EntityType="Self.tTuyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tUser" EntityType="Self.tUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tVeDuLich" EntityType="Self.tVeDuLich" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_tChiTietTuyenDuLich_MaChuyen" Association="Self.FK_tChiTietTuyenDuLich_MaChuyen">
             <End Role="tChuyenDuLich" EntitySet="tChuyenDuLich" />
             <End Role="tChiTietTuyenDuLich" EntitySet="tChiTietTuyenDuLich" />
@@ -157,9 +272,28 @@
             <End Role="tKhach" EntitySet="tKhach" />
             <End Role="tDangKy" EntitySet="tDangKy" />
           </AssociationSet>
+          <AssociationSet Name="FK_tKhach_TenDangNhap" Association="Self.FK_tKhach_TenDangNhap">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tKhach" EntitySet="tKhach" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhanVien_TenDangNhap" Association="Self.FK_tNhanVien_TenDangNhap">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhanVien_TenDNAdmin" Association="Self.FK_tNhanVien_TenDNAdmin">
+            <End Role="tAdmin" EntitySet="tAdmin" />
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPhieuDky_NguoiLapPhieu" Association="Self.FK_tPhieuDky_NguoiLapPhieu">
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+            <End Role="tPhieuDky" EntitySet="tPhieuDky" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tVeDuLich_MaKhach" Association="Self.FK_tVeDuLich_MaKhach">
+            <End Role="tKhach" EntitySet="tKhach" />
+            <End Role="tVeDuLich" EntitySet="tVeDuLich" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLDKDULICHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -212,17 +346,20 @@
             <PropertyRef Name="MaKhach" />
           </Key>
           <Property Name="MaKhach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenKhach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TenKhach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tDangKy" Relationship="Self.FK_tDangKy_MaKhach" FromRole="tKhach" ToRole="tDangKy" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tUser" Relationship="QLDKDULICHModel.FK_tKhach_TenDangNhap" FromRole="tKhach" ToRole="tUser" />
+          <NavigationProperty Name="tVeDuLich" Relationship="QLDKDULICHModel.FK_tVeDuLich_MaKhach" FromRole="tKhach" ToRole="tVeDuLich" />
         </EntityType>
         <EntityType Name="tTuyen">
           <Key>
             <PropertyRef Name="MaTuyen" />
           </Key>
           <Property Name="MaTuyen" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenTuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenTuyen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="SoNgay" Type="Int32" />
           <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tChuyenDuLich" Relationship="Self.FK_tChuyenDuLich_MaTuyen" FromRole="tTuyen" ToRole="tChuyenDuLich" />
@@ -290,7 +427,149 @@
             <End Role="tChuyenDuLich" EntitySet="tChuyenDuLich" />
             <End Role="tDiaDiemThamQuan" EntitySet="tDiaDiemThamQuan" />
           </AssociationSet>
+          <EntitySet Name="tAdmin" EntityType="QLDKDULICHModel.tAdmin" />
+          <EntitySet Name="tNhanVien" EntityType="QLDKDULICHModel.tNhanVien" />
+          <EntitySet Name="tPhieuDky" EntityType="QLDKDULICHModel.tPhieuDky" />
+          <EntitySet Name="tUser" EntityType="QLDKDULICHModel.tUser" />
+          <EntitySet Name="tVeDuLich" EntityType="QLDKDULICHModel.tVeDuLich" />
+          <AssociationSet Name="FK_tNhanVien_TenDNAdmin" Association="QLDKDULICHModel.FK_tNhanVien_TenDNAdmin">
+            <End Role="tAdmin" EntitySet="tAdmin" />
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tKhach_TenDangNhap" Association="QLDKDULICHModel.FK_tKhach_TenDangNhap">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tKhach" EntitySet="tKhach" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tVeDuLich_MaKhach" Association="QLDKDULICHModel.FK_tVeDuLich_MaKhach">
+            <End Role="tKhach" EntitySet="tKhach" />
+            <End Role="tVeDuLich" EntitySet="tVeDuLich" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhanVien_TenDangNhap" Association="QLDKDULICHModel.FK_tNhanVien_TenDangNhap">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPhieuDky_NguoiLapPhieu" Association="QLDKDULICHModel.FK_tPhieuDky_NguoiLapPhieu">
+            <End Role="tNhanVien" EntitySet="tNhanVien" />
+            <End Role="tPhieuDky" EntitySet="tPhieuDky" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="tAdmin">
+          <Key>
+            <PropertyRef Name="TenDNAdmin" />
+          </Key>
+          <Property Name="TenDNAdmin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tNhanVien" Relationship="QLDKDULICHModel.FK_tNhanVien_TenDNAdmin" FromRole="tAdmin" ToRole="tNhanVien" />
+        </EntityType>
+        <EntityType Name="tNhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenNV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TenDNAdmin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tAdmin" Relationship="QLDKDULICHModel.FK_tNhanVien_TenDNAdmin" FromRole="tNhanVien" ToRole="tAdmin" />
+          <NavigationProperty Name="tUser" Relationship="QLDKDULICHModel.FK_tNhanVien_TenDangNhap" FromRole="tNhanVien" ToRole="tUser" />
+          <NavigationProperty Name="tPhieuDky" Relationship="QLDKDULICHModel.FK_tPhieuDky_NguoiLapPhieu" FromRole="tNhanVien" ToRole="tPhieuDky" />
+        </EntityType>
+        <EntityType Name="tPhieuDky">
+          <Key>
+            <PropertyRef Name="SoPhieu" />
+          </Key>
+          <Property Name="SoPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenKhach" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TenChuyen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NguoiLapPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tNhanVien" Relationship="QLDKDULICHModel.FK_tPhieuDky_NguoiLapPhieu" FromRole="tPhieuDky" ToRole="tNhanVien" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="TenDangNhap" />
+          </Key>
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PhanQuyen" Type="Int32" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tKhach" Relationship="QLDKDULICHModel.FK_tKhach_TenDangNhap" FromRole="tUser" ToRole="tKhach" />
+          <NavigationProperty Name="tNhanVien" Relationship="QLDKDULICHModel.FK_tNhanVien_TenDangNhap" FromRole="tUser" ToRole="tNhanVien" />
+        </EntityType>
+        <EntityType Name="tVeDuLich">
+          <Key>
+            <PropertyRef Name="MaVe" />
+          </Key>
+          <Property Name="MaVe" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TenTour" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NgayKHanh" Type="DateTime" Precision="3" />
+          <Property Name="PhuongTien" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GiaVe" Type="Double" />
+          <Property Name="MaKhach" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tKhach" Relationship="QLDKDULICHModel.FK_tVeDuLich_MaKhach" FromRole="tVeDuLich" ToRole="tKhach" />
+        </EntityType>
+        <Association Name="FK_tNhanVien_TenDNAdmin">
+          <End Type="QLDKDULICHModel.tAdmin" Role="tAdmin" Multiplicity="1" />
+          <End Type="QLDKDULICHModel.tNhanVien" Role="tNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tAdmin">
+              <PropertyRef Name="TenDNAdmin" />
+            </Principal>
+            <Dependent Role="tNhanVien">
+              <PropertyRef Name="TenDNAdmin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tKhach_TenDangNhap">
+          <End Type="QLDKDULICHModel.tUser" Role="tUser" Multiplicity="0..1" />
+          <End Type="QLDKDULICHModel.tKhach" Role="tKhach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="tKhach">
+              <PropertyRef Name="TenDangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tVeDuLich_MaKhach">
+          <End Type="QLDKDULICHModel.tKhach" Role="tKhach" Multiplicity="1" />
+          <End Type="QLDKDULICHModel.tVeDuLich" Role="tVeDuLich" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tKhach">
+              <PropertyRef Name="MaKhach" />
+            </Principal>
+            <Dependent Role="tVeDuLich">
+              <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhanVien_TenDangNhap">
+          <End Type="QLDKDULICHModel.tUser" Role="tUser" Multiplicity="1" />
+          <End Type="QLDKDULICHModel.tNhanVien" Role="tNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="TenDangNhap" />
+            </Principal>
+            <Dependent Role="tNhanVien">
+              <PropertyRef Name="TenDangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPhieuDky_NguoiLapPhieu">
+          <End Type="QLDKDULICHModel.tNhanVien" Role="tNhanVien" Multiplicity="1" />
+          <End Type="QLDKDULICHModel.tPhieuDky" Role="tPhieuDky" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tPhieuDky">
+              <PropertyRef Name="NguoiLapPhieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -341,6 +620,7 @@
           <EntitySetMapping Name="tKhach">
             <EntityTypeMapping TypeName="QLDKDULICHModel.tKhach">
               <MappingFragment StoreEntitySet="tKhach">
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
                 <ScalarProperty Name="TenKhach" ColumnName="TenKhach" />
                 <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
@@ -366,6 +646,60 @@
               <ScalarProperty Name="MaDD" ColumnName="MaDD" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="tAdmin">
+            <EntityTypeMapping TypeName="QLDKDULICHModel.tAdmin">
+              <MappingFragment StoreEntitySet="tAdmin">
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenDNAdmin" ColumnName="TenDNAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNhanVien">
+            <EntityTypeMapping TypeName="QLDKDULICHModel.tNhanVien">
+              <MappingFragment StoreEntitySet="tNhanVien">
+                <ScalarProperty Name="TenDNAdmin" ColumnName="TenDNAdmin" />
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhieuDky">
+            <EntityTypeMapping TypeName="QLDKDULICHModel.tPhieuDky">
+              <MappingFragment StoreEntitySet="tPhieuDky">
+                <ScalarProperty Name="NguoiLapPhieu" ColumnName="NguoiLapPhieu" />
+                <ScalarProperty Name="TenChuyen" ColumnName="TenChuyen" />
+                <ScalarProperty Name="TenKhach" ColumnName="TenKhach" />
+                <ScalarProperty Name="SoPhieu" ColumnName="SoPhieu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tUser">
+            <EntityTypeMapping TypeName="QLDKDULICHModel.tUser">
+              <MappingFragment StoreEntitySet="tUser">
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="PhanQuyen" ColumnName="PhanQuyen" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tVeDuLich">
+            <EntityTypeMapping TypeName="QLDKDULICHModel.tVeDuLich">
+              <MappingFragment StoreEntitySet="tVeDuLich">
+                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
+                <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
+                <ScalarProperty Name="PhuongTien" ColumnName="PhuongTien" />
+                <ScalarProperty Name="NgayKHanh" ColumnName="NgayKHanh" />
+                <ScalarProperty Name="TenTour" ColumnName="TenTour" />
+                <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

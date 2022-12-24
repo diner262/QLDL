@@ -12,25 +12,27 @@ namespace QLDL
     using System;
     using System.Collections.Generic;
     
-    public partial class tKhach
+    public partial class tUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tKhach()
+        public tUser()
         {
-            this.tDangKy = new HashSet<tDangKy>();
-            this.tVeDuLich = new HashSet<tVeDuLich>();
+            this.tKhach = new HashSet<tKhach>();
+            this.tNhanVien = new HashSet<tNhanVien>();
         }
     
-        public string MaKhach { get; set; }
-        public string TenKhach { get; set; }
-        public string DienThoai { get; set; }
-        public string DiaChi { get; set; }
         public string TenDangNhap { get; set; }
+        public string MatKhau { get; set; }
+        public Nullable<int> PhanQuyen { get; set; }
+        public string GioiTinh { get; set; }
+        public string Email { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string SDT { get; set; }
+        public string DiaChi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tDangKy> tDangKy { get; set; }
-        public virtual tUser tUser { get; set; }
+        public virtual ICollection<tKhach> tKhach { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tVeDuLich> tVeDuLich { get; set; }
+        public virtual ICollection<tNhanVien> tNhanVien { get; set; }
     }
 }

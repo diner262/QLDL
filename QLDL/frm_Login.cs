@@ -16,6 +16,7 @@ namespace QLDL
     {
         string username = "admin";
         string password = "123456";
+        QLDKDULICHEntities data = new QLDKDULICHEntities();
 
         public frm_Login()
         {
@@ -94,6 +95,14 @@ namespace QLDL
         bool checkAccount(String username, String password)
         {
             if (username == this.username && password == this.password)
+            {
+                return true;
+            }
+
+            var u = data.tUser
+                    .Where(x => x.TenDangNhap == txtUser.Text & x.MatKhau == txtPassword.Text)
+                    .FirstOrDefault();
+            if (u != null)
             {
                 return true;
             }

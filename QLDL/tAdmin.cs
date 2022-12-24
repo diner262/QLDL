@@ -12,25 +12,18 @@ namespace QLDL
     using System;
     using System.Collections.Generic;
     
-    public partial class tKhach
+    public partial class tAdmin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tKhach()
+        public tAdmin()
         {
-            this.tDangKy = new HashSet<tDangKy>();
-            this.tVeDuLich = new HashSet<tVeDuLich>();
+            this.tNhanVien = new HashSet<tNhanVien>();
         }
     
-        public string MaKhach { get; set; }
-        public string TenKhach { get; set; }
-        public string DienThoai { get; set; }
-        public string DiaChi { get; set; }
-        public string TenDangNhap { get; set; }
+        public string TenDNAdmin { get; set; }
+        public string MatKhau { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tDangKy> tDangKy { get; set; }
-        public virtual tUser tUser { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tVeDuLich> tVeDuLich { get; set; }
+        public virtual ICollection<tNhanVien> tNhanVien { get; set; }
     }
 }

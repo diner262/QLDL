@@ -482,7 +482,7 @@ namespace QLDL
             this.layoutControlItem1.Size = new System.Drawing.Size(1045, 622);
             this.layoutControlItem1.Text = "Danh sách thông tin khách hàng";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(154, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(156, 13);
             // 
             // naviPageDangKy
             // 
@@ -576,7 +576,7 @@ namespace QLDL
             this.layoutControlItem2.Size = new System.Drawing.Size(1045, 622);
             this.layoutControlItem2.Text = "Danh sách thông tin đăng ký du lịch";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(170, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(172, 13);
             // 
             // naviPageTuyen
             // 
@@ -670,7 +670,7 @@ namespace QLDL
             this.layoutControlItem3.Size = new System.Drawing.Size(1045, 622);
             this.layoutControlItem3.Text = "Danh sách các tuyến chạy";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(126, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(128, 13);
             // 
             // naviPageChuyen
             // 
@@ -773,7 +773,7 @@ namespace QLDL
             this.layoutControlItem4.Size = new System.Drawing.Size(1045, 622);
             this.layoutControlItem4.Text = "Danh sách các chuyến hoạt động";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(159, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(163, 13);
             // 
             // naviPageDiaDiem
             // 
@@ -859,7 +859,7 @@ namespace QLDL
             this.layoutControlItem5.Size = new System.Drawing.Size(1045, 622);
             this.layoutControlItem5.Text = "Danh sách địa điểm du lịch";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(125, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(130, 13);
             // 
             // navigationPage6
             // 
@@ -1032,6 +1032,7 @@ namespace QLDL
             this.barAbout.Id = 23;
             this.barAbout.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barAbout.ImageOptions.SvgImage")));
             this.barAbout.Name = "barAbout";
+            this.barAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barAbout_ItemClick);
             // 
             // barReport
@@ -1056,6 +1057,7 @@ namespace QLDL
             this.barButtonItem1.Id = 26;
             this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 
             // barFeedBack
             // 
@@ -1063,6 +1065,7 @@ namespace QLDL
             this.barFeedBack.Id = 27;
             this.barFeedBack.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barFeedBack.ImageOptions.SvgImage")));
             this.barFeedBack.Name = "barFeedBack";
+            this.barFeedBack.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 
             // skinPaletteDropDownButtonItem2
             // 

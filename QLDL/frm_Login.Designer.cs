@@ -36,27 +36,27 @@ namespace QLDL
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panelPassword = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHide = new System.Windows.Forms.Button();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.btnClose = new System.Windows.Forms.Button();
             this.sidePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidePanel2.SuspendLayout();
             this.panelPassword.SuspendLayout();
-            this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel1
@@ -82,7 +82,7 @@ namespace QLDL
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(55, 464);
+            this.labelControl6.Location = new System.Drawing.Point(68, 464);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(233, 21);
             this.labelControl6.TabIndex = 7;
@@ -94,7 +94,7 @@ namespace QLDL
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(25, 491);
+            this.labelControl5.Location = new System.Drawing.Point(39, 491);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(263, 21);
             this.labelControl5.TabIndex = 6;
@@ -106,7 +106,7 @@ namespace QLDL
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(226, 437);
+            this.labelControl4.Location = new System.Drawing.Point(223, 437);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(75, 21);
             this.labelControl4.TabIndex = 5;
@@ -147,6 +147,16 @@ namespace QLDL
             this.labelControl2.Size = new System.Drawing.Size(178, 29);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Chào mừng bạn";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLDL.Properties.Resources.logo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(95, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // sidePanel2
             // 
@@ -205,6 +215,18 @@ namespace QLDL
             this.panelPassword.Size = new System.Drawing.Size(450, 48);
             this.panelPassword.TabIndex = 10;
             // 
+            // btnShow
+            // 
+            this.btnShow.FlatAppearance.BorderSize = 0;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Image = global::QLDL.Properties.Resources.view;
+            this.btnShow.Location = new System.Drawing.Point(410, 6);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(36, 36);
+            this.btnShow.TabIndex = 13;
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
@@ -217,6 +239,28 @@ namespace QLDL
             this.txtPassword.TabIndex = 10;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QLDL.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnHide
+            // 
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Image = global::QLDL.Properties.Resources.hide;
+            this.btnHide.Location = new System.Drawing.Point(410, 6);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(36, 36);
+            this.btnHide.TabIndex = 14;
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // panelUser
             // 
@@ -239,6 +283,16 @@ namespace QLDL
             this.txtUser.Size = new System.Drawing.Size(370, 20);
             this.txtUser.TabIndex = 9;
             this.txtUser.Click += new System.EventHandler(this.txtUser_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QLDL.Properties.Resources.user1;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // labelControl7
             // 
@@ -266,60 +320,6 @@ namespace QLDL
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnShow
-            // 
-            this.btnShow.FlatAppearance.BorderSize = 0;
-            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShow.Image = global::QLDL.Properties.Resources.view;
-            this.btnShow.Location = new System.Drawing.Point(410, 6);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(36, 36);
-            this.btnShow.TabIndex = 13;
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QLDL.Properties.Resources.padlock;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnHide
-            // 
-            this.btnHide.FlatAppearance.BorderSize = 0;
-            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Image = global::QLDL.Properties.Resources.hide;
-            this.btnHide.Location = new System.Drawing.Point(410, 6);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(36, 36);
-            this.btnHide.TabIndex = 14;
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QLDL.Properties.Resources.user1;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLDL.Properties.Resources.logo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frm_Login
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -336,15 +336,15 @@ namespace QLDL
             this.Text = "frm_Login";
             this.sidePanel1.ResumeLayout(false);
             this.sidePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidePanel2.ResumeLayout(false);
             this.sidePanel2.PerformLayout();
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
